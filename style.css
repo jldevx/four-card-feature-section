@@ -1,0 +1,138 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+  text-align: center;
+  margin: 0;
+  padding: 2rem;
+  font-family: 'Poppins', Sans-Serif;
+  color: #4c4e61;
+}
+
+header {
+  width: 100%;
+  height: auto;
+  display: flex;
+  border: solid red;
+  justify-content: center;
+}
+
+.intro-section {
+  font-size: clamp(0.7rem, 1.5vw, 1rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: min(80%, 45rem);
+}
+
+.intro-section__tagline {
+  font-size: 2em;
+  margin-bottom: .5em;
+}
+
+.intro-section__title {
+  margin: 0;
+  font-size: 2em;
+}
+
+.intro-section__description {
+  font-size: 1.4em;
+}
+
+.card-wrapper {
+  text-align: left;
+  font-size: clamp(0.8rem, 1.5vw, 1.2rem);
+  border: solid blue;
+  display: grid;
+  grid-template-areas: "header main footer" "header sidenav footer";
+  height: 50em;
+  justify-content: center;
+  gap: 1.5em;
+  padding: 1em;
+  width: min(85%, 55rem);
+  height: auto;
+  font-size: .8em;
+}
+
+.card-wrapper__card {
+  padding: 1em 2em;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  width: 20em;
+}
+
+.card-wrapper__header {
+  grid-area: header;
+  display: flex;
+  align-items: center;
+  width: 20em;
+}
+
+.card-wrapper__footer {
+  grid-area: footer;
+  display: flex;
+  align-items: center;
+  width: 20em;
+}
+
+.card-wrapper__supervisor {
+  border-top: 5px solid #45d3d3;
+}
+
+.card-wrapper__teambuilder {
+  grid-area: main;
+  border-top: 5px solid #ea5353;
+}
+
+.card-wrapper__karma {
+  grid-area: sidenav;
+  border-top: 5px solid #fcaf4a;
+}
+
+.card-wrapper__calculator {
+  border-top: 5px solid #549ef2;
+}
+
+.icon-wrapper {
+  width: 100%;
+  height: 6em;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border: solid red;
+}
+
+.card-wrapper-icon {
+  height: 3.5em;
+  width: auto;
+  right: .5em;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+
+@media all and (max-width: 50rem) {
+  .card-wrapper {
+    grid-template-areas: "header" "main" "sidenav" "footer";
+  }
+  .card-wrapper__supervisor {
+    width: 100%;
+  }
+  .card-wrapper__calculator {
+    width: 100%;
+  }
+}
